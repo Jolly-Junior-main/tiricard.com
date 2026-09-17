@@ -23,10 +23,17 @@ export function FeaturesSection() {
       </div>
 
       <div className="max-w-[1600px] mx-auto px-4 md:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+        <div className="relative w-full flex overflow-hidden group pb-8">
+        <motion.div
+          className="flex flex-nowrap w-max"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ ease: "linear", duration: 40, repeat: Infinity }}
+        >
+          {[0, 1].map((blockIdx) => (
+            <div key={blockIdx} className="flex flex-nowrap items-center gap-6 md:gap-8 pr-6 md:pr-8">
           
           {/* Card 01 - Dark */}
-          <div className="flex flex-col w-full h-[650px] md:h-[750px] rounded-[20px] relative overflow-hidden bg-brand-charcoal text-white shadow-2xl border border-brand-charcoal/10">
+          <div className="flex flex-col flex-shrink-0 w-[85vw] sm:w-[400px] md:w-[450px] lg:w-[480px] h-[650px] md:h-[750px] rounded-[20px] relative overflow-hidden bg-brand-charcoal text-white shadow-2xl border border-brand-charcoal/10">
             {/* Window Chrome */}
             <div className="h-[50px] px-5 border-b border-white/10 flex items-center justify-between bg-[#1f1d1d]">
               <div className="flex gap-2 w-16">
@@ -61,7 +68,7 @@ export function FeaturesSection() {
           </div>
 
           {/* Card 02 - Light */}
-          <div className="flex flex-col w-full h-[650px] md:h-[750px] rounded-[20px] relative overflow-hidden bg-white text-brand-charcoal shadow-2xl border border-brand-soft">
+          <div className="flex flex-col flex-shrink-0 w-[85vw] sm:w-[400px] md:w-[450px] lg:w-[480px] h-[650px] md:h-[750px] rounded-[20px] relative overflow-hidden bg-white text-brand-charcoal shadow-2xl border border-brand-soft">
             {/* Window Chrome */}
             <div className="h-[50px] px-5 border-b border-brand-soft flex items-center justify-between bg-[#F9F9F9]">
               <div className="flex gap-2 w-16">
@@ -124,7 +131,7 @@ export function FeaturesSection() {
           </div>
 
           {/* Card 03 - Dark */}
-          <div className="flex flex-col w-full h-[650px] md:h-[750px] rounded-[20px] relative overflow-hidden bg-[#181515] text-white shadow-2xl border border-white/10">
+          <div className="flex flex-col flex-shrink-0 w-[85vw] sm:w-[400px] md:w-[450px] lg:w-[480px] h-[650px] md:h-[750px] rounded-[20px] relative overflow-hidden bg-[#181515] text-white shadow-2xl border border-white/10">
             {/* Window Chrome */}
             <div className="h-[50px] px-5 border-b border-white/5 flex items-center justify-between bg-[#1D1B1B]">
               <div className="flex gap-2 w-16">
@@ -166,7 +173,7 @@ export function FeaturesSection() {
           </div>
 
         {/* Card 04 - Light */}
-        <div className="flex flex-col w-full min-h-[650px] h-auto md:h-[750px] rounded-[20px] relative overflow-hidden bg-[#FAF9F6] text-brand-charcoal shadow-2xl border border-brand-soft">
+        <div className="flex flex-col flex-shrink-0 w-[85vw] sm:w-[400px] md:w-[450px] lg:w-[480px] min-h-[650px] h-auto md:h-[750px] rounded-[20px] relative overflow-hidden bg-[#FAF9F6] text-brand-charcoal shadow-2xl border border-brand-soft">
           {/* Window Chrome */}
           <div className="h-[50px] px-5 border-b border-brand-soft flex items-center justify-between bg-white flex-shrink-0">
             <div className="flex gap-2 w-16">
@@ -208,8 +215,11 @@ export function FeaturesSection() {
           </div>
         </div>
 
+            </div>
+          ))}
+        </motion.div>
       </div>
-    </div>
+      </div>
     </section>
   );
 }
