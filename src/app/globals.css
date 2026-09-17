@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #F3F0EA;
+  --color-brand-bg-alt: #F6F4EF;
+  --color-brand-white: #FFFFFF;
+  --color-brand-warm-white: #FAF9F6;
+  --color-brand-charcoal: #171717;
+  --color-brand-black: #080808;
+  --color-brand-gray: #77736D;
+  --color-brand-gold: #ebb134;
+  --color-border-soft: rgba(20, 20, 20, 0.10);
+  --color-border-light: rgba(255, 255, 255, 0.16);
+  
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  --background: var(--color-brand-bg);
+  --foreground: var(--color-brand-charcoal);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-editorial {
+  font-family: var(--font-serif);
+}
+
+@layer utilities {
+  .clip-reveal {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
