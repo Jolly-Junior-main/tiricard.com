@@ -71,10 +71,7 @@ export function HowItWorksSection() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      // eslint-disable-next-line react-compiler/react-compiler`n      // eslint-disable-next-line react-compiler/react-compiler
-      // eslint-disable-next-line react-compiler/react-compiler
-      // // eslint-disable-next-line react-compiler/react-compiler
-      setPlaying(!window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+      setTimeout(() => setPlaying(!window.matchMedia('(prefers-reduced-motion: reduce)').matches), 0);
     }
   }, []);
 
