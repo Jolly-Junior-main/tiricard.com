@@ -18,7 +18,7 @@ const CATEGORIES = [
   "VIP Access"
 ];
 
-const EVENTS = [
+export const EVENTS = [
   { id: 1, title: "Addis Tech Summit", price: 150, category: "Tech Conferences", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=80" },
   { id: 2, title: "Jazz Night Live", price: 45, category: "Music Concerts", image: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=400&q=80" },
   { id: 3, title: "Startup Founders Gala", price: 200, category: "Gala Dinners", image: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&q=80" },
