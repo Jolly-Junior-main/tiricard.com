@@ -1,3 +1,4 @@
+"use client";
 
 import { EVENTS } from "./EventsDashboardModal";
 
@@ -45,3 +46,4 @@ export function EventsSection() {
     </section>
   );
 }
+
