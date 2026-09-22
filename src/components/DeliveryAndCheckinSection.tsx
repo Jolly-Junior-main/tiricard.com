@@ -27,12 +27,12 @@ export function DeliveryAndCheckinSection() {
               className="bg-white p-4 rounded-[32px] shadow-[0_20px_40px_rgba(0,0,0,0.05)] border border-black/5 w-full max-w-[320px]"
             >
               <div className="bg-[#E9E9EB] p-4 rounded-2xl rounded-tl-sm text-left mb-4 w-11/12 text-[#1D1D1F] text-[15px] leading-relaxed">
-                Hi Hana! We're so excited to invite you to our wedding. Please tap the link below to see the details and RSVP.
+                Hi Hana! We&apos;re so excited to invite you to our wedding. Please tap the link below to see the details and RSVP.
               </div>
               <div className="bg-[#0B84FE] p-4 rounded-2xl rounded-tr-sm text-left w-11/12 ml-auto">
                 <div className="bg-white/10 rounded-xl p-3 border border-white/20 text-white">
                   <div className="w-full h-24 bg-white/20 rounded-lg mb-3" />
-                  <p className="font-semibold text-[14px]">Selam & Abel's Wedding</p>
+                  <p className="font-semibold text-[14px]">Selam & Abel&apos;s Wedding</p>
                   <p className="text-[12px] opacity-80">October 17, 2026</p>
                 </div>
               </div>
