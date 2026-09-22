@@ -1,4 +1,6 @@
-import { Navbar } from "@/components/Navbar";
+
+import fs from "fs";
+const page = `import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { EditorialIntro } from "@/components/OccasionsSection";
 import { InvitationCollection } from "@/components/InvitationCollection";
@@ -24,4 +26,5 @@ export default function Home() {
       <Footer />
     </main>
   );
-}
+}`;
+fs.writeFileSync("src/app/page.tsx", page, "utf-8");
