@@ -1,4 +1,7 @@
-"use client";
+
+import fs from "fs";
+
+const content = `"use client";
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -175,3 +178,6 @@ export function HeroSection() {
     </section>
   );
 }
+`;
+
+fs.writeFileSync("src/components/HeroSection.tsx", content, "utf-8");
