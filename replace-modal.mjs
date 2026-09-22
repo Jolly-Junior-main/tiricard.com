@@ -1,4 +1,7 @@
-"use client";
+
+import fs from "fs";
+
+const content = `"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -72,24 +75,24 @@ export function EventsDashboardModal({ isOpen, onClose }: EventsDashboardModalPr
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
-        className={`fixed inset-0 z-[100] flex overflow-hidden font-sans ${bgMain}`}
+        className={\`fixed inset-0 z-[100] flex overflow-hidden font-sans \${bgMain}\`}
       >
         {/* Left Sidebar */}
-        <div className={`w-[280px] border-r flex flex-col h-full shrink-0 ${bgSidebar}`}>
+        <div className={\`w-[280px] border-r flex flex-col h-full shrink-0 \${bgSidebar}\`}>
           <div className="p-6 flex items-center justify-between">
             <h2 className="text-xl font-bold flex items-center gap-2">
               <span className="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center text-[10px] text-white">T</span>
               TiriCard.
             </h2>
             <div className="flex gap-2">
-              <button onClick={() => setIsLightMode(!isLightMode)} className={`w-8 h-8 rounded flex items-center justify-center transition-colors ${buttonBg}`}>
+              <button onClick={() => setIsLightMode(!isLightMode)} className={\`w-8 h-8 rounded flex items-center justify-center transition-colors \${buttonBg}\`}>
                 {isLightMode ? (
                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 ) : (
                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 )}
               </button>
-              <button onClick={onClose} className={`w-8 h-8 rounded flex items-center justify-center transition-colors ${buttonBg}`}>
+              <button onClick={onClose} className={\`w-8 h-8 rounded flex items-center justify-center transition-colors \${buttonBg}\`}>
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M11 1L1 11M1 1L11 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
               </button>
             </div>
@@ -102,7 +105,7 @@ export function EventsDashboardModal({ isOpen, onClose }: EventsDashboardModalPr
                 <li key={cat}>
                   <button 
                     onClick={() => setActiveCategory(cat)}
-                    className={`w-full text-left px-6 py-3 text-sm transition-colors ${activeCategory === cat ? "bg-emerald-500 text-white font-medium" : (isLightMode ? "text-gray-600 hover:bg-gray-100" : "text-gray-400 hover:bg-white/5")}`}
+                    className={\`w-full text-left px-6 py-3 text-sm transition-colors \${activeCategory === cat ? "bg-emerald-500 text-white font-medium" : (isLightMode ? "text-gray-600 hover:bg-gray-100" : "text-gray-400 hover:bg-white/5")}\`}
                   >
                     {cat}
                   </button>
@@ -113,12 +116,12 @@ export function EventsDashboardModal({ isOpen, onClose }: EventsDashboardModalPr
         </div>
 
         {/* Main Content (Grid) */}
-        <div className={`flex-1 flex flex-col h-full ${bgMain}`}>
-          <div className={`p-8 pb-4 flex items-center justify-between border-b ${borderBottom}`}>
+        <div className={\`flex-1 flex flex-col h-full \${bgMain}\`}>
+          <div className={\`p-8 pb-4 flex items-center justify-between border-b \${borderBottom}\`}>
             <h1 className="text-3xl font-bold">{activeCategory}</h1>
             <div className="relative">
               <div className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-gray-400 border-t-transparent" />
-              <input type="text" placeholder="Search events..." className={`text-sm rounded-full pl-10 pr-4 py-2.5 outline-none w-[300px] border transition-all ${searchBg}`} />
+              <input type="text" placeholder="Search events..." className={\`text-sm rounded-full pl-10 pr-4 py-2.5 outline-none w-[300px] border transition-all \${searchBg}\`} />
             </div>
           </div>
           
@@ -128,14 +131,14 @@ export function EventsDashboardModal({ isOpen, onClose }: EventsDashboardModalPr
                 <div 
                   key={event.id}
                   onClick={() => addToCart(event.id)}
-                  className={`rounded-2xl p-6 flex flex-col items-center text-center cursor-pointer transition-all hover:-translate-y-1 border hover:border-emerald-500/50 group ${bgCard}`}
+                  className={\`rounded-2xl p-6 flex flex-col items-center text-center cursor-pointer transition-all hover:-translate-y-1 border hover:border-emerald-500/50 group \${bgCard}\`}
                 >
                   <div className="w-32 h-32 rounded-full mb-6 shadow-xl relative overflow-hidden">
                     <img src={event.image} alt={event.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                   </div>
                   <h3 className="font-semibold text-lg mb-1 group-hover:text-emerald-500 transition-colors">{event.title}</h3>
-                  <p className={`text-sm mb-4 ${textMuted}`}>{event.category}</p>
-                  <p className="text-xl font-bold">${event.price.toFixed(2)}</p>
+                  <p className={\`text-sm mb-4 \${textMuted}\`}>{event.category}</p>
+                  <p className="text-xl font-bold">\${event.price.toFixed(2)}</p>
                 </div>
               ))}
             </div>
@@ -143,14 +146,14 @@ export function EventsDashboardModal({ isOpen, onClose }: EventsDashboardModalPr
         </div>
 
         {/* Right Sidebar (Cart) */}
-        <div className={`w-[380px] border-l flex flex-col h-full shrink-0 ${bgSidebar}`}>
+        <div className={\`w-[380px] border-l flex flex-col h-full shrink-0 \${bgSidebar}\`}>
           <div className="p-8 pb-4">
             <h2 className="text-2xl font-bold">Tickets Order</h2>
             <p className="text-sm text-gray-500 mt-1">Order #{(Math.random() * 1000000).toFixed(0)}</p>
           </div>
           
           <div className="flex-1 overflow-y-auto px-8 py-4">
-            <div className={`flex text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4 border-b pb-2 ${borderBottom}`}>
+            <div className={\`flex text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4 border-b pb-2 \${borderBottom}\`}>
               <span className="flex-1">Item</span>
               <span className="w-12 text-center">Qty</span>
               <span className="w-16 text-right">Price</span>
@@ -166,13 +169,13 @@ export function EventsDashboardModal({ isOpen, onClose }: EventsDashboardModalPr
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="font-semibold text-sm truncate">{event.title}</p>
-                      <p className={`text-xs ${textMuted}`}>${event.price.toFixed(2)}</p>
+                      <p className={\`text-xs \${textMuted}\`}>\${event.price.toFixed(2)}</p>
                     </div>
-                    <div className={`w-8 h-8 rounded flex items-center justify-center text-sm border ${qtyBg}`}>
+                    <div className={\`w-8 h-8 rounded flex items-center justify-center text-sm border \${qtyBg}\`}>
                       {item.qty}
                     </div>
                     <div className="w-16 text-right font-semibold text-sm">
-                      ${(event.price * item.qty).toFixed(2)}
+                      \${(event.price * item.qty).toFixed(2)}
                     </div>
                   </div>
                 );
@@ -185,18 +188,18 @@ export function EventsDashboardModal({ isOpen, onClose }: EventsDashboardModalPr
             </div>
           </div>
           
-          <div className={`p-8 border-t ${borderBottom}`}>
-            <div className={`flex justify-between text-sm mb-3 ${textMuted}`}>
+          <div className={\`p-8 border-t \${borderBottom}\`}>
+            <div className={\`flex justify-between text-sm mb-3 \${textMuted}\`}>
               <span>Sub Total</span>
-              <span className={isLightMode ? "text-[#1d1d1f]" : "text-white"}>${subTotal.toFixed(2)}</span>
+              <span className={isLightMode ? "text-[#1d1d1f]" : "text-white"}>\${subTotal.toFixed(2)}</span>
             </div>
-            <div className={`flex justify-between text-sm mb-6 ${textMuted}`}>
+            <div className={\`flex justify-between text-sm mb-6 \${textMuted}\`}>
               <span>Tax (10%)</span>
-              <span className={isLightMode ? "text-[#1d1d1f]" : "text-white"}>${(subTotal * 0.1).toFixed(2)}</span>
+              <span className={isLightMode ? "text-[#1d1d1f]" : "text-white"}>\${(subTotal * 0.1).toFixed(2)}</span>
             </div>
             <div className="flex justify-between text-xl font-bold mb-8">
               <span>Grand Total</span>
-              <span>${(subTotal * 1.1).toFixed(2)}</span>
+              <span>\${(subTotal * 1.1).toFixed(2)}</span>
             </div>
             
             <button className="w-full py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold transition-colors shadow-lg shadow-emerald-500/20">
@@ -208,3 +211,7 @@ export function EventsDashboardModal({ isOpen, onClose }: EventsDashboardModalPr
     </AnimatePresence>
   );
 }
+`;
+
+fs.writeFileSync("src/components/EventsDashboardModal.tsx", content, "utf-8");
+console.log("File written");
