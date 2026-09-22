@@ -95,7 +95,7 @@ export function TestimonialsSection() {
     <section className="bg-[#FAF9F6] py-32 md:py-48 px-4 flex justify-center text-center">
       <div className="max-w-[1000px]">
         <h2 className="font-serif text-[clamp(2rem,4vw,4rem)] text-brand-charcoal leading-[1.2] mb-12">
-          "Our guests were talking about the invitation before the wedding even started."
+          &quot;Our guests were talking about the invitation before the wedding even started.&quot;
         </h2>
         <p className="font-sans text-[14px] uppercase tracking-widest text-brand-gray">
           HELEN & NATI <br/> <span className="text-[11px] opacity-70 mt-2 block">Wedding — Addis Ababa</span>
@@ -174,7 +174,7 @@ export function FinalCTA() {
           Create something<br/>worth opening.
         </h2>
         <p className="font-sans text-[16px] md:text-[20px] text-brand-charcoal/80 font-light max-w-[500px] mx-auto mb-16">
-          Beautiful invitations for life's unforgettable moments.
+          Beautiful invitations for life&apos;s unforgettable moments.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

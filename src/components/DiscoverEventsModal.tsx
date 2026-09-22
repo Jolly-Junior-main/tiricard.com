@@ -59,7 +59,7 @@ export function DiscoverEventsModal({ isOpen, onClose }: DiscoverEventsModalProp
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
               Discover <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-cyan-400">
-                What's Next
+                What&apos;s Next
               </span>
             </h1>
             <p className="text-gray-400 max-w-lg mx-auto mb-10 text-lg">
@@ -269,7 +269,7 @@ export function DiscoverEventsModal({ isOpen, onClose }: DiscoverEventsModalProp
             <div className="flex items-center justify-between mb-6">
               <div>
                 <h2 className="text-xl font-bold mb-1">Trending This Week</h2>
-                <p className="text-sm text-gray-500">What everyone's talking about right now</p>
+                <p className="text-sm text-gray-500">What everyone&apos;s talking about right now</p>
               </div>
               <div className="flex gap-2">
                 <button className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">
@@ -308,7 +308,7 @@ export function DiscoverEventsModal({ isOpen, onClose }: DiscoverEventsModalProp
 
           {/* Host Banner */}
           <div className="w-full rounded-[32px] bg-gradient-to-r from-fuchsia-500 via-purple-500 to-cyan-500 p-10 md:p-14 flex flex-col md:flex-row items-center justify-between relative overflow-hidden mb-20 shadow-[0_20px_50px_rgba(217,70,239,0.2)]">
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+            <div className="absolute inset-0 bg-[url(&apos;https://www.transparenttextures.com/patterns/cubes.png&apos;)] opacity-10 mix-blend-overlay"></div>
             <div className="relative z-10 max-w-xl text-center md:text-left mb-8 md:mb-0">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
                 Host your own event. <br/> Reach thousands instantly.

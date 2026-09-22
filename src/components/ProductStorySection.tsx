@@ -30,7 +30,7 @@ export function ProductStorySection() {
             <div className="w-3 h-3 rounded-full bg-[#27C93F] border border-[#1AAB29]" />
           </div>
           <div className="mx-auto font-medium text-[13px] text-[#6E6E73] select-none flex-1 text-center pr-12">
-            Tiricard — Sara & Noah's Wedding
+            Tiricard — Sara & Noah&apos;s Wedding
           </div>
         </div>
 
