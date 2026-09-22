@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -13,7 +12,9 @@ const CARDS = [
     labelClass: "text-white/70",
     buttonClass: "bg-white text-orange-500 hover:bg-orange-50",
     shape: (
-      <div className="absolute -bottom-16 -right-16 w-72 h-72 rounded-full bg-yellow-400 opacity-90 shadow-2xl" />
+      <div className="absolute -bottom-8 -right-8 w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-orange-300/30">
+        <img src="https://images.unsplash.com/photo-1540039155732-676231e51c89?w=400&q=80" alt="" className="w-full h-full object-cover" />
+      </div>
     )
   },
   {
@@ -25,8 +26,22 @@ const CARDS = [
     labelClass: "text-brand-gray",
     buttonClass: "bg-white text-brand-black hover:bg-gray-100",
     shape: (
-      <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-violet-600 rounded-tl-[100px] shadow-2xl rotate-12 transform origin-bottom-right flex items-end justify-end overflow-hidden">
-         <div className="w-32 h-32 bg-orange-500 rounded-tl-[100px] -translate-x-4 -translate-y-4" />
+      <div className="absolute -bottom-8 -right-8 w-64 h-64 rounded-tl-[80px] shadow-2xl rotate-6 transform origin-bottom-right overflow-hidden border-4 border-violet-500/20">
+         <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=400&q=80" alt="" className="w-full h-full object-cover scale-110 -rotate-6" />
+      </div>
+    )
+  },
+  {
+    label: "PAST EVENT",
+    title: "Addis Tech Summit '24",
+    buttonText: "View Gallery",
+    bgClass: "bg-gradient-to-br from-emerald-500 to-teal-600",
+    textClass: "text-white",
+    labelClass: "text-white/80",
+    buttonClass: "bg-white text-emerald-600 hover:bg-emerald-50",
+    shape: (
+      <div className="absolute -bottom-10 -right-4 w-72 h-72 rounded-[40px] border-4 border-white/20 shadow-2xl overflow-hidden rotate-[-12deg]">
+        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&q=80" alt="Tech Summit" className="w-full h-full object-cover scale-110 rotate-12" />
       </div>
     )
   },
@@ -39,12 +54,25 @@ const CARDS = [
     labelClass: "text-white/80",
     buttonClass: "bg-white text-pink-600 hover:bg-pink-50",
     shape: (
-      <div className="absolute -bottom-10 -right-4 w-56 h-72 bg-brand-charcoal rounded-[32px] border-4 border-gray-800 shadow-2xl flex flex-col p-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-        <div className="w-20 h-1 bg-gray-800 rounded-full mx-auto mb-4" />
-        <div className="flex-1 bg-black rounded-2xl p-3">
-          <div className="w-3/4 h-3 bg-gray-800 rounded mb-2" />
-          <div className="w-1/2 h-3 bg-gray-800 rounded" />
+      <div className="absolute -bottom-10 -right-4 w-56 h-72 bg-brand-charcoal rounded-[32px] border-4 border-gray-800 shadow-2xl flex flex-col p-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden">
+        <div className="w-20 h-1 bg-gray-600 rounded-full mx-auto mb-3 shrink-0 relative z-10" />
+        <div className="flex-1 rounded-2xl relative overflow-hidden bg-black">
+          <img src="https://images.unsplash.com/photo-1576086208577-9be71b402e20?w=400&q=80" alt="" className="absolute inset-0 w-full h-full object-cover opacity-90" />
         </div>
+      </div>
+    )
+  },
+  {
+    label: "PAST EVENT",
+    title: "Global Music Fest",
+    buttonText: "View Gallery",
+    bgClass: "bg-gradient-to-br from-purple-600 to-indigo-800",
+    textClass: "text-white",
+    labelClass: "text-white/80",
+    buttonClass: "bg-white text-purple-600 hover:bg-purple-50",
+    shape: (
+      <div className="absolute -bottom-4 -right-12 w-64 h-64 rounded-full shadow-2xl border-4 border-purple-400/30 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&q=80" alt="Music Fest" className="w-full h-full object-cover" />
       </div>
     )
   },
@@ -57,10 +85,23 @@ const CARDS = [
     labelClass: "text-white/70",
     buttonClass: "bg-white text-violet-600 hover:bg-violet-50",
     shape: (
-      <>
-        <div className="absolute -bottom-4 -right-12 w-64 h-64 bg-white/10 rounded-[64px] backdrop-blur-md transform rotate-12 shadow-xl border border-white/20" />
-        <div className="absolute bottom-12 -right-4 w-48 h-48 bg-white/5 rounded-[48px] backdrop-blur-sm transform -rotate-12 border border-white/10" />
-      </>
+      <div className="absolute -bottom-4 -right-12 w-64 h-64 rounded-[40px] transform rotate-12 shadow-2xl border-4 border-white/20 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=400&q=80" alt="" className="w-full h-full object-cover -rotate-12 scale-125 opacity-90" />
+      </div>
+    )
+  },
+  {
+    label: "PAST EVENT",
+    title: "Startup Networking '25",
+    buttonText: "View Gallery",
+    bgClass: "bg-gradient-to-br from-gray-800 to-gray-900",
+    textClass: "text-white",
+    labelClass: "text-white/80",
+    buttonClass: "bg-white text-gray-800 hover:bg-gray-100",
+    shape: (
+      <div className="absolute -bottom-12 -right-8 w-64 h-64 rounded-xl overflow-hidden shadow-xl border-4 border-gray-600 rotate-[8deg]">
+         <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?w=400&q=80" alt="Startup Networking" className="w-full h-full object-cover rotate-[-8deg] scale-110" />
+      </div>
     )
   },
   {
@@ -72,7 +113,23 @@ const CARDS = [
     labelClass: "text-white/80",
     buttonClass: "bg-white text-blue-600 hover:bg-blue-50",
     shape: (
-      <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-white/20 backdrop-blur-md transform rotate-45 shadow-2xl border-l border-t border-white/30" />
+      <div className="absolute -bottom-20 -right-20 w-80 h-80 transform rotate-45 shadow-2xl border-4 border-white/30 overflow-hidden rounded-[32px]">
+         <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400&q=80" alt="" className="w-full h-full object-cover -rotate-45 scale-150 opacity-90" />
+      </div>
+    )
+  },
+  {
+    label: "PAST EVENT",
+    title: "Fashion Week Gala",
+    buttonText: "View Gallery",
+    bgClass: "bg-gradient-to-br from-rose-400 to-red-500",
+    textClass: "text-white",
+    labelClass: "text-white/80",
+    buttonClass: "bg-white text-rose-500 hover:bg-rose-50",
+    shape: (
+      <div className="absolute -bottom-16 -right-16 w-80 h-80 rounded-full shadow-2xl overflow-hidden border-4 border-red-300/30">
+        <img src="https://images.unsplash.com/photo-1509631179647-0c37cb1190bc?w=400&q=80" alt="Fashion Week" className="w-full h-full object-cover" />
+      </div>
     )
   },
   {
@@ -84,11 +141,9 @@ const CARDS = [
     labelClass: "text-gray-400",
     buttonClass: "bg-white border border-gray-200 text-brand-charcoal hover:bg-gray-50 shadow-sm",
     shape: (
-      <>
-        <div className="absolute -bottom-12 -right-8 w-48 h-48 rounded-full bg-blue-500 shadow-xl" />
-        <div className="absolute bottom-24 right-20 w-16 h-16 rounded-full bg-orange-500 shadow-lg" />
-        <div className="absolute bottom-16 right-48 w-8 h-8 rounded-full bg-blue-600 shadow-md" />
-      </>
+      <div className="absolute -bottom-10 -right-8 w-60 h-60 rounded-2xl overflow-hidden shadow-2xl border border-gray-200 -rotate-6">
+         <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=80" alt="" className="w-full h-full object-cover rotate-6 scale-110" />
+      </div>
     )
   }
 ];
@@ -116,7 +171,7 @@ export function TicketingSection() {
         <motion.div
           className="flex flex-nowrap w-max"
           animate={{ x: ["0%", "-50%"] }}
-          transition={{ ease: "linear", duration: 45, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 55, repeat: Infinity }}
         >
           {[0, 1].map((blockIdx) => (
             <div key={blockIdx} className="flex flex-nowrap items-center gap-6 md:gap-8 pr-6 md:pr-8">
