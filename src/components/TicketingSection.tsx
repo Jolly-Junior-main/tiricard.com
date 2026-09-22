@@ -93,7 +93,12 @@ const CARDS = [
   }
 ];
 
+import { useState } from "react";
+import { EventsDashboardModal } from "./EventsDashboardModal";
+
 export function TicketingSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="py-20 md:py-32 bg-brand-bg relative overflow-hidden border-t border-brand-charcoal/10">
       <div className="max-w-[1400px] mx-auto px-4 md:px-10 mb-12 md:mb-16">
@@ -144,6 +149,17 @@ export function TicketingSection() {
           ))}
         </motion.div>
       </div>
+
+      <div className="flex justify-center mt-12 pb-8">
+        <button 
+          onClick={() => setIsModalOpen(true)}
+          className="px-12 py-4 bg-brand-charcoal text-white rounded-full font-sans font-semibold tracking-wide hover:bg-brand-charcoal/90 transition-all shadow-xl hover:-translate-y-1"
+        >
+          All Events and Tickets
+        </button>
+      </div>
+
+      <EventsDashboardModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }
