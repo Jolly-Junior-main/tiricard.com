@@ -163,7 +163,7 @@ export function FeaturesSection() {
                     <div className="bg-[#0B84FE] p-4 rounded-2xl rounded-tr-sm w-[90%] ml-auto text-white text-left shadow-md">
                       <div className="bg-white/10 border border-white/20 p-4 rounded-xl backdrop-blur-sm">
                         <div className="w-full h-14 bg-white/20 mb-3 rounded-md" />
-                        <p className="font-serif text-[16px] mb-1 leading-tight">Selam & Abel's Wedding</p>
+                        <p className="font-serif text-[16px] mb-1 leading-tight">Selam & Abel&apos;s Wedding</p>
                         <p className="font-sans text-[11px] opacity-80">{t('feat.3.date')}</p>
                       </div>
                     </div>
