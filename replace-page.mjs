@@ -8,6 +8,7 @@ import { PartnersSection } from "@/components/PartnersSection";
 import { FeaturesSection } from "@/components/FeaturesSection";
 import { EventsSection } from "@/components/EventsSection";
 import { TicketingSection } from "@/components/TicketingSection";
+import { PastEventsSection } from "@/components/PastEventsSection";
 import { HowItWorksSection } from "@/components/CheckinAndHowItWorks";
 import { Footer } from "@/components/OtherSections";
 
@@ -23,6 +24,7 @@ export default function Home() {
       <EventsSection />
       <HowItWorksSection />
       <TicketingSection />
+      <PastEventsSection />
       <Footer />
     </main>
   );
