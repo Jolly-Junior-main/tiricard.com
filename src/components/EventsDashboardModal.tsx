@@ -201,7 +201,7 @@ export function EventsDashboardModal({ isOpen, onClose }: EventsDashboardModalPr
         <div className={`hidden lg:flex w-[320px] xl:w-[380px] border-l flex-col h-full shrink-0 ${bgSidebar}`}>
           <div className="p-8 pb-4">
             <h2 className="text-2xl font-bold">Tickets Order</h2>
-            <p className="text-sm text-gray-500 mt-1">Order #{(Math.random() * 1000000).toFixed(0)}</p>
+            <p className="text-sm text-gray-500 mt-1">Order #910243</p>
           </div>
           
           <div className="flex-1 overflow-y-auto px-8 py-4">
