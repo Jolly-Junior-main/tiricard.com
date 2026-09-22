@@ -45,7 +45,7 @@ export function GuestExperienceSection() {
                <div className="bg-white p-5 rounded-3xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-black/5 mb-4">
                  <p className="font-medium text-[#1D1D1F] mb-4">Will you attend?</p>
                  <div className="flex flex-col gap-2">
-                   <button className="w-full py-3 rounded-full bg-black text-white text-[14px] font-medium hover:bg-black/80 transition-colors">Yes, I'll be there</button>
+                   <button className="w-full py-3 rounded-full bg-black text-white text-[14px] font-medium hover:bg-black/80 transition-colors">Yes, I&apos;ll be there</button>
                    <button className="w-full py-3 rounded-full bg-[#F5F5F7] text-[#1D1D1F] text-[14px] font-medium hover:bg-black/5 transition-colors">Unfortunately, no</button>
                  </div>
                </div>

@@ -1,28 +1,13 @@
 ﻿const fs = require('fs');
 
-function fix(file) {
-  let c = fs.readFileSync(file, 'utf8');
-  c = c.replace(/We're/g, 'We&apos;re');
-  c = c.replace(/Abel's/g, 'Abel&apos;s');
-  c = c.replace(/won't/g, 'won&apos;t');
-  c = c.replace(/let's/g, 'let&apos;s');
-  c = c.replace(/they're/g, 'they&apos;re');
-  c = c.replace(/What's/g, 'What&apos;s');
-  c = c.replace(/It's/g, 'It&apos;s');
-  c = c.replace(/didn't/g, 'didn&apos;t');
-  c = c.replace(/haven't/g, 'haven&apos;t');
-  c = c.replace(/you'll/g, 'you&apos;ll');
-  c = c.replace(/they'll/g, 'they&apos;ll');
-  c = c.replace(/hasn't/g, 'hasn&apos;t');
-  c = c.replace(/Let's/g, 'Let&apos;s');
-  c = c.replace(/don't/g, 'don&apos;t');
-  c = c.replace(/it's/g, 'it&apos;s');
-  c = c.replace(/we're/g, 'we&apos;re');
-  c = c.replace(/you're/g, 'you&apos;re');
-  fs.writeFileSync(file, c);
-}
+let c = fs.readFileSync('src/components/GuestExperienceSection.tsx', 'utf8');
+c = c.replace(/I'll/g, 'I&apos;ll');
+fs.writeFileSync('src/components/GuestExperienceSection.tsx', c);
 
-fix('src/components/FeaturesSection.tsx');
-fix('src/components/GuestExperienceSection.tsx');
-fix('src/components/HowItWorksSection.tsx');
-fix('src/components/CheckinAndHowItWorks.tsx');
+c = fs.readFileSync('src/components/HowItWorksSection.tsx', 'utf8');
+c = c.replace(/I'll/g, 'I&apos;ll');
+fs.writeFileSync('src/components/HowItWorksSection.tsx', c);
+
+c = fs.readFileSync('src/components/CheckinAndHowItWorks.tsx', 'utf8');
+c = c.replace(/window !== 'undefined'\) \{\n.*\n.*\n.*\n.*\}/g, "window !== 'undefined') {\n      setPlaying(!window.matchMedia('(prefers-reduced-motion: reduce)').matches);\n    }");
+fs.writeFileSync('src/components/CheckinAndHowItWorks.tsx', c);

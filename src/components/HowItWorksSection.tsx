@@ -79,7 +79,7 @@ export function HowItWorksSection() {
           <div className="w-[260px] bg-white rounded-[24px] shadow-xl p-6 text-center">
             <h4 className="font-semibold text-[#1D1D1F] mb-6">Will you attend?</h4>
             <div className="space-y-3">
-              <div className="w-full py-3 rounded-full bg-[#1D1D1F] text-white font-medium text-sm">Yes, I'll be there</div>
+              <div className="w-full py-3 rounded-full bg-[#1D1D1F] text-white font-medium text-sm">Yes, I&apos;ll be there</div>
               <div className="w-full py-3 rounded-full bg-white border border-black/10 text-[#1D1D1F] font-medium text-sm">Unfortunately, no</div>
             </div>
           </div>
