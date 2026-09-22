@@ -22,7 +22,7 @@ export function EventCategorySection() {
           One place for every celebration.
         </h2>
         <p className="text-[19px] md:text-[21px] text-[#6E6E73] max-w-[600px] mx-auto">
-          Whatever you're celebrating, start with an invitation that feels like you.
+          Whatever you&apos;re celebrating, start with an invitation that feels like you.
         </p>
       </div>
 

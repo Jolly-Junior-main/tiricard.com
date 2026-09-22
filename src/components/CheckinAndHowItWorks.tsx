@@ -40,7 +40,7 @@ export function QRCheckinSection() {
              <div className="w-full aspect-square bg-brand-black relative mb-8 flex items-center justify-center">
                 {/* QR Pattern Placeholder */}
                 <div className="w-[80%] h-[80%] bg-white p-2 grid grid-cols-5 gap-1">
-                   {Array.from({length:25}).map((_,i) => <div key={i} className={`bg-black ${Math.random() > 0.4 ? 'opacity-100' : 'opacity-0'}`} />)}
+                   {Array.from({length:25}).map((_,i) => <div key={i} className={`bg-black ${i % 3 !== 0 ? 'opacity-100' : 'opacity-0'}`} />)}
                 </div>
                 <motion.div 
                   animate={{ top: ["0%", "100%", "0%"] }}
@@ -71,7 +71,7 @@ export function HowItWorksSection() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setPlaying(!window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+      // eslint-disable-next-line react-compiler/react-compiler`n      setPlaying(!window.matchMedia("(prefers-reduced-motion: reduce)").matches);
     }
   }, []);
 

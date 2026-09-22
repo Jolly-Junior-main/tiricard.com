@@ -86,7 +86,7 @@ export function DeliveryAndCheckinSection() {
               <div className="w-48 h-48 bg-black rounded-2xl relative flex items-center justify-center overflow-hidden mb-8">
                 {/* Simulated QR Code */}
                 <div className="w-40 h-40 grid grid-cols-5 gap-1 p-2 bg-white">
-                   {Array.from({length:25}).map((_,i) => <div key={i} className={`bg-black ${Math.random() > 0.5 ? 'opacity-100' : 'opacity-0'}`} />)}
+                   {Array.from({length:25}).map((_,i) => <div key={i} className={`bg-black ${i % 2 === 0 ? 'opacity-100' : 'opacity-0'}`} />)}
                 </div>
                 
                 {/* Scanner Line */}
