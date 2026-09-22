@@ -73,7 +73,8 @@ export function HowItWorksSection() {
     if (typeof window !== 'undefined') {
       // eslint-disable-next-line react-compiler/react-compiler`n      // eslint-disable-next-line react-compiler/react-compiler
       // eslint-disable-next-line react-compiler/react-compiler
-      // setPlaying(!window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+      // // eslint-disable-next-line react-compiler/react-compiler
+      setPlaying(!window.matchMedia("(prefers-reduced-motion: reduce)").matches);
     }
   }, []);
 
