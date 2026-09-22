@@ -4,6 +4,7 @@ import { EditorialIntro } from "@/components/OccasionsSection";
 import { InvitationCollection } from "@/components/InvitationCollection";
 import { PartnersSection } from "@/components/PartnersSection";
 import { FeaturesSection } from "@/components/FeaturesSection";
+import { TicketingSection } from '@/components/TicketingSection';
 import { HowItWorksSection } from "@/components/CheckinAndHowItWorks";
 import { Footer } from "@/components/OtherSections";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <InvitationCollection />
       <PartnersSection />
       <FeaturesSection />
+      <TicketingSection />
       <HowItWorksSection />
       <Footer />
     </main>
