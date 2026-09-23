@@ -7,7 +7,7 @@ const CARDS = [
     label: "TICKETING",
     title: "Instant QR Code Generation",
     buttonText: "Read article",
-    bgClass: "bg-gradient-to-br from-orange-500 to-amber-500",
+    bgClass: "bg-gradient-to-br from-orange-500 to-amber-500", bgImage: "https://images.unsplash.com/photo-1540039155732-676231e51c89?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-white/70",
     buttonClass: "bg-white text-orange-500 hover:bg-orange-50",
@@ -21,7 +21,7 @@ const CARDS = [
     label: "ANALYTICS",
     title: "Real-time Event Insights",
     buttonText: "Read article",
-    bgClass: "bg-brand-black",
+    bgClass: "bg-brand-black", bgImage: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-brand-gray",
     buttonClass: "bg-white text-brand-black hover:bg-gray-100",
@@ -35,7 +35,7 @@ const CARDS = [
     label: "PAST EVENT",
     title: "Addis Tech Summit '24",
     buttonText: "View Gallery",
-    bgClass: "bg-gradient-to-br from-emerald-500 to-teal-600",
+    bgClass: "bg-gradient-to-br from-emerald-500 to-teal-600", bgImage: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-white/80",
     buttonClass: "bg-white text-emerald-600 hover:bg-emerald-50",
@@ -49,7 +49,7 @@ const CARDS = [
     label: "CASE STUDY",
     title: "Lightning Fast Check-in",
     buttonText: "Read article",
-    bgClass: "bg-gradient-to-br from-pink-500 to-rose-500",
+    bgClass: "bg-gradient-to-br from-pink-500 to-rose-500", bgImage: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-white/80",
     buttonClass: "bg-white text-pink-600 hover:bg-pink-50",
@@ -66,7 +66,7 @@ const CARDS = [
     label: "PAST EVENT",
     title: "Global Music Fest",
     buttonText: "View Gallery",
-    bgClass: "bg-gradient-to-br from-purple-600 to-indigo-800",
+    bgClass: "bg-gradient-to-br from-purple-600 to-indigo-800", bgImage: "https://images.unsplash.com/photo-1515169067868-5387ec356754?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-white/80",
     buttonClass: "bg-white text-purple-600 hover:bg-purple-50",
@@ -80,7 +80,7 @@ const CARDS = [
     label: "REPORT",
     title: "Secure Global Transactions",
     buttonText: "Read article",
-    bgClass: "bg-gradient-to-br from-violet-600 to-indigo-700",
+    bgClass: "bg-gradient-to-br from-violet-600 to-indigo-700", bgImage: "https://images.unsplash.com/photo-1509631179647-0c37cb1190bc?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-white/70",
     buttonClass: "bg-white text-violet-600 hover:bg-violet-50",
@@ -94,7 +94,7 @@ const CARDS = [
     label: "PAST EVENT",
     title: "Startup Networking '25",
     buttonText: "View Gallery",
-    bgClass: "bg-gradient-to-br from-gray-800 to-gray-900",
+    bgClass: "bg-gradient-to-br from-gray-800 to-gray-900", bgImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-white/80",
     buttonClass: "bg-white text-gray-800 hover:bg-gray-100",
@@ -108,7 +108,7 @@ const CARDS = [
     label: "CASE STUDY",
     title: "Dynamic Seat Allocation",
     buttonText: "Read article",
-    bgClass: "bg-gradient-to-br from-blue-500 to-cyan-400",
+    bgClass: "bg-gradient-to-br from-blue-500 to-cyan-400", bgImage: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-white/80",
     buttonClass: "bg-white text-blue-600 hover:bg-blue-50",
@@ -122,7 +122,7 @@ const CARDS = [
     label: "PAST EVENT",
     title: "Fashion Week Gala",
     buttonText: "View Gallery",
-    bgClass: "bg-gradient-to-br from-rose-400 to-red-500",
+    bgClass: "bg-gradient-to-br from-rose-400 to-red-500", bgImage: "https://images.unsplash.com/photo-1540039155732-676231e51c89?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-white/80",
     buttonClass: "bg-white text-rose-500 hover:bg-rose-50",
@@ -136,7 +136,7 @@ const CARDS = [
     label: "CASE STUDY",
     title: "Brand Your Event Tickets",
     buttonText: "Read article",
-    bgClass: "bg-white",
+    bgClass: "bg-white", bgImage: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=800&q=80",
     textClass: "text-brand-charcoal",
     labelClass: "text-gray-400",
     buttonClass: "bg-white border border-gray-200 text-brand-charcoal hover:bg-gray-50 shadow-sm",
@@ -181,7 +181,7 @@ export function TicketingSection() {
                   className={`relative flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] h-[500px] md:h-[550px] rounded-[32px] p-8 md:p-10 flex flex-col justify-between overflow-hidden shadow-2xl ${card.bgClass}`}
                 >
                   {/* Decorative shape */}
-                  {card.shape}
+                  <div className="absolute inset-0 z-0">{card.bgImage && <img src={card.bgImage} className="w-full h-full object-cover mix-blend-overlay opacity-30" alt="" />}</div>{card.shape}
                   
                   {/* Content */}
                   <div className="relative z-10">

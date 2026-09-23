@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/Navbar";
+﻿import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { EditorialIntro } from "@/components/OccasionsSection";
 import { InvitationCollection } from "@/components/InvitationCollection";
@@ -21,8 +21,8 @@ export default function Home() {
       <FeaturesSection />
       <EventsSection />
       <HowItWorksSection />
-      <TicketingSection />
       <PastEventsSection />
+      <TicketingSection />
       <Footer />
     </main>
   );

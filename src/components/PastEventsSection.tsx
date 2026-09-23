@@ -9,7 +9,7 @@ const CARDS = [
     label: "PAST EVENT",
     title: "Addis Tech Summit '24",
     buttonText: "View Gallery",
-    bgClass: "bg-gradient-to-br from-emerald-500 to-teal-600",
+    bgClass: "bg-gradient-to-br from-emerald-500 to-teal-600", bgImage: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-white/80",
     buttonClass: "bg-white text-emerald-600 hover:bg-emerald-50",
@@ -23,7 +23,7 @@ const CARDS = [
     label: "PAST EVENT",
     title: "Global Music Fest",
     buttonText: "View Gallery",
-    bgClass: "bg-gradient-to-br from-purple-600 to-indigo-800",
+    bgClass: "bg-gradient-to-br from-purple-600 to-indigo-800", bgImage: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-white/80",
     buttonClass: "bg-white text-purple-600 hover:bg-purple-50",
@@ -37,7 +37,7 @@ const CARDS = [
     label: "PAST EVENT",
     title: "Startup Networking '25",
     buttonText: "View Gallery",
-    bgClass: "bg-gradient-to-br from-gray-800 to-gray-900",
+    bgClass: "bg-gradient-to-br from-gray-800 to-gray-900", bgImage: "https://images.unsplash.com/photo-1515169067868-5387ec356754?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-white/80",
     buttonClass: "bg-white text-gray-800 hover:bg-gray-100",
@@ -51,7 +51,7 @@ const CARDS = [
     label: "PAST EVENT",
     title: "Fashion Week Gala",
     buttonText: "View Gallery",
-    bgClass: "bg-gradient-to-br from-rose-400 to-red-500",
+    bgClass: "bg-gradient-to-br from-rose-400 to-red-500", bgImage: "https://images.unsplash.com/photo-1509631179647-0c37cb1190bc?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-white/80",
     buttonClass: "bg-white text-rose-500 hover:bg-rose-50",
@@ -65,13 +65,58 @@ const CARDS = [
     label: "PAST EVENT",
     title: "Art Biennale 2023",
     buttonText: "View Gallery",
-    bgClass: "bg-gradient-to-br from-orange-400 to-amber-600",
+    bgClass: "bg-gradient-to-br from-orange-400 to-amber-600", bgImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
     textClass: "text-white",
     labelClass: "text-white/80",
     buttonClass: "bg-white text-orange-600 hover:bg-orange-50",
     shape: (
       <div className="absolute -bottom-10 -right-8 w-60 h-60 rounded-[32px] overflow-hidden shadow-2xl border-4 border-white/20 -rotate-6">
          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=80" alt="" className="w-full h-full object-cover rotate-6 scale-110" />
+      </div>
+    )
+  }
+  {
+    label: 'PAST EVENT',
+    title: 'Global Music Fest',
+    buttonText: 'View Gallery',
+    bgClass: 'bg-gradient-to-br from-purple-600 to-indigo-800',
+    bgImage: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80',
+    textClass: 'text-white',
+    labelClass: 'text-white/80',
+    buttonClass: 'bg-white text-purple-600 hover:bg-purple-50',
+    shape: (
+      <div className="absolute -bottom-4 -right-12 w-64 h-64 rounded-full shadow-2xl border-4 border-purple-400/30 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&q=80" alt="Music Fest" className="w-full h-full object-cover" />
+      </div>
+    )
+  },
+  {
+    label: 'PAST EVENT',
+    title: 'Startup Networking 25',
+    buttonText: 'View Gallery',
+    bgClass: 'bg-gradient-to-br from-gray-800 to-gray-900',
+    bgImage: 'https://images.unsplash.com/photo-1515169067868-5387ec356754?w=800&q=80',
+    textClass: 'text-white',
+    labelClass: 'text-white/80',
+    buttonClass: 'bg-white text-gray-800 hover:bg-gray-100',
+    shape: (
+      <div className="absolute -bottom-12 -right-8 w-64 h-64 rounded-xl overflow-hidden shadow-xl border-4 border-gray-600 rotate-[8deg]">
+         <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?w=400&q=80" alt="Startup Networking" className="w-full h-full object-cover rotate-[-8deg] scale-110" />
+      </div>
+    )
+  },
+  {
+    label: 'PAST EVENT',
+    title: 'Fashion Week Gala',
+    buttonText: 'View Gallery',
+    bgClass: 'bg-gradient-to-br from-rose-400 to-red-500',
+    bgImage: 'https://images.unsplash.com/photo-1509631179647-0c37cb1190bc?w=800&q=80',
+    textClass: 'text-white',
+    labelClass: 'text-white/80',
+    buttonClass: 'bg-white text-rose-500 hover:bg-rose-50',
+    shape: (
+      <div className="absolute -bottom-16 -right-16 w-80 h-80 rounded-full shadow-2xl overflow-hidden border-4 border-red-300/30">
+        <img src="https://images.unsplash.com/photo-1509631179647-0c37cb1190bc?w=400&q=80" alt="Fashion Week" className="w-full h-full object-cover" />
       </div>
     )
   }
@@ -106,7 +151,7 @@ export function PastEventsSection() {
                   className={`relative flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] h-[500px] md:h-[550px] rounded-[32px] p-8 md:p-10 flex flex-col justify-between overflow-hidden shadow-2xl ${card.bgClass}`}
                 >
                   {/* Decorative shape */}
-                  {card.shape}
+                  <div className="absolute inset-0 z-0">{card.bgImage && <img src={card.bgImage} className="w-full h-full object-cover mix-blend-overlay opacity-30" alt="" />}</div>{card.shape}
                   
                   {/* Content */}
                   <div className="relative z-10">
