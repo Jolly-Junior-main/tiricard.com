@@ -74,7 +74,7 @@ const CARDS = [
          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=80" alt="" className="w-full h-full object-cover rotate-6 scale-110" />
       </div>
     )
-  }
+  },
   {
     label: 'PAST EVENT',
     title: 'Global Music Fest',
