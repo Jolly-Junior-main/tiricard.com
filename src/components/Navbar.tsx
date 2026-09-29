@@ -4,11 +4,14 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useStore } from "@/lib/store";
+import { usePathname } from "next/navigation";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { lang, setLang, t } = useStore();
+  const pathname = usePathname();
+  const isDarkText = scrolled || pathname !== "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,31 +27,31 @@ export function Navbar() {
         <nav className="w-full max-w-[1600px] mx-auto px-4 md:px-10 flex items-center justify-between">
           <div className="flex-1 flex items-center gap-3">
             <img src="/logo.png" alt="Tiricard Logo" className="h-10 md:h-12 w-auto object-contain" />
-            <span className={`font-serif text-xl md:text-2xl tracking-widest uppercase ${scrolled ? 'text-brand-black' : 'text-white'} transition-colors duration-700 mt-1`}>Tiricard</span>
+            <span className={`font-serif text-xl md:text-2xl tracking-widest uppercase ${isDarkText ? 'text-brand-black' : 'text-white'} transition-colors duration-700 mt-1`}>Tiricard</span>
           </div>
 
-          <div className={`hidden lg:flex items-center gap-10 text-[13px] font-semibold tracking-[0.15em] uppercase ${scrolled ? 'text-brand-charcoal' : 'text-white/90'} transition-colors duration-700`}>
+          <div className={`hidden lg:flex items-center gap-10 text-[13px] font-semibold tracking-[0.15em] uppercase ${isDarkText ? 'text-brand-charcoal' : 'text-brand-gray'} transition-colors duration-700`}>
             <a href="#templates" className="hover:opacity-60 transition-opacity">{t('nav.templates')}</a>
             <a href="#how-it-works" className="hover:opacity-60 transition-opacity">{t('hiw.eyebrow')}</a>
             <a href="#features" className="hover:opacity-60 transition-opacity">{t('nav.features')}</a>
             <a href="#pricing" className="hover:opacity-60 transition-opacity">{t('nav.pricing')}</a>
           </div>
 
-          <div className={`hidden lg:flex flex-1 justify-end items-center gap-8 text-[13px] font-semibold tracking-[0.15em] uppercase ${scrolled ? 'text-brand-charcoal' : 'text-white'} transition-colors duration-700`}>
+          <div className={`hidden lg:flex flex-1 justify-end items-center gap-8 text-[13px] font-semibold tracking-[0.15em] uppercase ${isDarkText ? 'text-brand-charcoal' : 'text-brand-gray'} transition-colors duration-700`}>
             <button className="hover:opacity-60 transition-opacity" onClick={() => setLang(lang === 'en' ? 'am' : 'en')}>
               {lang === 'en' ? 'EN / አማርኛ' : 'አማርኛ / EN'}
             </button>
             <a href="#signin" className="hover:opacity-60 transition-opacity">{t('nav.signin')}</a>
-            <a href="#create" className={`px-6 py-3 border ${scrolled ? 'border-brand-black hover:bg-brand-black hover:text-brand-white' : 'border-white hover:bg-white hover:text-brand-black'} transition-all duration-500`}>
+            <a href="#create" className={`px-6 py-3 border ${isDarkText ? 'border-brand-black hover:bg-brand-black hover:text-brand-white' : 'border-white hover:bg-white hover:text-brand-black'} transition-all duration-500`}>
               {t('nav.create')}
             </a>
           </div>
 
           {/* Mobile Toggle */}
           <div className="lg:hidden flex flex-1 justify-end items-center gap-6">
-            <a href="#create" className={`text-[13px] font-semibold tracking-widest uppercase ${scrolled ? 'text-brand-black' : 'text-white'}`}>{t('nav.create')}</a>
+            <a href="#create" className={`text-[13px] font-semibold tracking-widest uppercase ${isDarkText ? 'text-brand-black' : 'text-white'}`}>{t('nav.create')}</a>
             <button 
-              className={`flex items-center gap-2 text-[13px] font-semibold tracking-widest uppercase ${scrolled ? 'text-brand-black' : 'text-white'}`}
+              className={`flex items-center gap-2 text-[13px] font-semibold tracking-widest uppercase ${isDarkText ? 'text-brand-black' : 'text-white'}`}
               onClick={() => setMobileMenuOpen(true)}
             >
               Menu <Menu className="w-5 h-5" />
