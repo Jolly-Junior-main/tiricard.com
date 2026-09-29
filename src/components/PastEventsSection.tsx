@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { DiscoverEventsModal } from "./DiscoverEventsModal";
+import Link from "next/link";
 
 const CARDS = [
   {
@@ -123,7 +122,7 @@ const CARDS = [
 ];
 
 export function PastEventsSection() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  
 
   return (
     <section className="py-20 md:py-32 bg-[#faf9f6] relative overflow-hidden">
@@ -176,18 +175,18 @@ export function PastEventsSection() {
       </div>
 
       <div className="flex justify-center mt-12 pb-8">
-        <button 
-          onClick={() => setIsModalOpen(true)}
-          className="flex items-center gap-3 px-10 py-4 bg-[#0a0a0f] text-white rounded-full font-sans font-semibold tracking-wide hover:bg-[#15151a] transition-all shadow-2xl hover:-translate-y-1 hover:shadow-fuchsia-500/20 group"
+        <Link 
+          href="/events"
+          className="flex items-center gap-3 px-10 py-4 bg-brand-charcoal text-white rounded-full font-sans font-semibold tracking-wide hover:bg-brand-black transition-all shadow-xl hover:-translate-y-1 hover:shadow-brand-gold/20 group border border-brand-gold/20"
         >
-          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-500 to-cyan-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+          <div className="w-6 h-6 rounded-full bg-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
-          PulseHub Portal
-        </button>
+          Discover Events
+        </Link>
       </div>
 
-      <DiscoverEventsModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      
     </section>
   );
 }
